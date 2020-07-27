@@ -82,28 +82,7 @@ $(document).ready(function () {
 
   $("#fivepins").on("click", function () {
     findCurrentFrame();
-
-    if (midframe === false && endframe === false) {
-      $("#frame" + currentframe + "roll1").text(5);
-      midframe = true;
-      firstroll = 5;
-    } else if (frametenspare === true) {
-      $("#frame10roll3").text(5);
-      game.addFrame([firstroll, secondroll, 5]);
-    } else if (
-      game.frames.length === 9 &&
-      midframe === true &&
-      firstroll === 5
-    ) {
-      $("#frame10roll2").text(5);
-      frametenspare = true;
-      secondroll = 5;
-    } else {
-      $("#frame" + currentframe + "roll2").text(5);
-      midframe = false;
-      game.addFrame([firstroll, 5]);
-    }
-
+    addScoreToTable(5);
     updateScore();
   });
 
