@@ -15,42 +15,44 @@ $(document).ready(function () {
     currentframe = game.frames.length + 1;
   }
 
-  $("#zeropins").on("click", function () {
-    findCurrentFrame();
-
+  function addScoreToTable(score) {
     if (midframe === false && endframe === false) {
-      $("#frame" + currentframe + "roll1").text(0);
+      $("#frame" + currentframe + "roll1").text(score);
       midframe = true;
-      firstroll = 0;
+      firstroll = score;
     } else if (
       frametenstrike === true &&
       midframe === true &&
       endframe === false
     ) {
-      $("#frame10roll2").text(0);
+      $("#frame10roll2").text(score);
       endframe = true;
       midframe = false;
-      secondroll = 0;
+      secondroll = score;
     } else if (frametenstrike === true && endframe === true) {
-      $("#frame10roll3").text(0);
-      game.addFrame([firstroll, secondroll, 0]);
+      $("#frame10roll3").text(score);
+      game.addFrame([firstroll, secondroll, score]);
     } else if (frametenspare === true) {
-      $("#frame10roll3").text(0);
-      game.addFrame([firstroll, secondroll, 0]);
+      $("#frame10roll3").text(score);
+      game.addFrame([firstroll, secondroll, score]);
     } else if (
       game.frames.length === 9 &&
       midframe === true &&
-      firstroll === 10
+      firstroll === 10 - score
     ) {
-      $("#frame10roll2").text(0);
+      $("#frame10roll2").text(score);
       frametenspare = true;
-      secondroll = 0;
+      secondroll = score;
     } else {
-      $("#frame" + currentframe + "roll2").text(0);
+      $("#frame" + currentframe + "roll2").text(score);
       midframe = false;
-      game.addFrame([firstroll, 0]);
+      game.addFrame([firstroll, score]);
     }
+  }
 
+  $("#zeropins").on("click", function () {
+    findCurrentFrame();
+    addScoreToTable(0);
     updateScore();
   });
 
