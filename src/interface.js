@@ -63,7 +63,11 @@ $(document).ready(function () {
   }
 
   function hideOrShowButtons(number) {
-    if (midframe === true) {
+    if (frametenspare === true) {
+      for (let i = 10; i > 0; i--) {
+        $("#" + numbersObject[i.toString()] + "pins").show();
+      }
+    } else if (midframe === true) {
       for (let i = 10; i > 10 - number; i--) {
         $("#" + numbersObject[i.toString()] + "pins").hide();
       }
