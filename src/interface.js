@@ -67,6 +67,10 @@ $(document).ready(function () {
       for (let i = 10; i > 0; i--) {
         $("#" + numbersObject[i.toString()] + "pins").show();
       }
+    } else if (frametenstrike === true && endframe === true) {
+      for (let i = 10; i > 10 - number; i--) {
+        $("#" + numbersObject[i.toString()] + "pins").hide();
+      }
     } else if (midframe === true) {
       for (let i = 10; i > 10 - number; i--) {
         $("#" + numbersObject[i.toString()] + "pins").hide();
