@@ -68,12 +68,9 @@ $(document).ready(function () {
         $("#" + numbersObject[i.toString()] + "pins").hide();
       }
     } else {
-      $("#fivepins").show();
-      $("#sixpins").show();
-      $("#sevenpins").show();
-      $("#eightpins").show();
-      $("#ninepins").show();
-      $("#tenpins").show();
+      for (let i = 10; i > 0; i--) {
+        $("#" + numbersObject[i.toString()] + "pins").show();
+      }
     }
   }
 
@@ -81,7 +78,6 @@ $(document).ready(function () {
     findCurrentFrame();
     addScoreToTable(0);
     updateScore();
-    hideOrShowButtons(0);
   });
 
   $("#onepin").on("click", function () {
