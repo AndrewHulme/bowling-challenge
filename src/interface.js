@@ -62,110 +62,89 @@ $(document).ready(function () {
     }
   }
 
+  function hideOrShowButtons(number) {
+    if (midframe === true) {
+      for (let i = 10; i > 10 - number; i--) {
+        $("#" + numbersObject[i.toString()] + "pins").hide();
+      }
+    } else {
+      $("#fivepins").show();
+      $("#sixpins").show();
+      $("#sevenpins").show();
+      $("#eightpins").show();
+      $("#ninepins").show();
+      $("#tenpins").show();
+    }
+  }
+
   $("#zeropins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(0);
     updateScore();
+    hideOrShowButtons(0);
   });
 
   $("#onepin").on("click", function () {
     findCurrentFrame();
     addScoreToTable(1);
     updateScore();
+    hideOrShowButtons(1);
   });
 
   $("#twopins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(2);
     updateScore();
+    hideOrShowButtons(2);
   });
 
   $("#threepins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(3);
     updateScore();
+    hideOrShowButtons(3);
   });
 
   $("#fourpins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(4);
     updateScore();
-
-    if (midframe === true) {
-      // $("#fivepins").hide();
-      // $("#sixpins").hide();
-      $("#sevenpins").hide();
-      $("#eightpins").hide();
-      $("#ninepins").hide();
-      $("#tenpins").hide();
-    } else {
-      $("#fivepins").show();
-      $("#sixpins").show();
-      $("#sevenpins").show();
-      $("#eightpins").show();
-      $("#ninepins").show();
-      $("#tenpins").show();
-    }
+    hideOrShowButtons(4);
   });
 
   $("#fivepins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(5);
     updateScore();
-
-    if (midframe === true) {
-      $("#sixpins").hide();
-      $("#sevenpins").hide();
-      $("#eightpins").hide();
-      $("#ninepins").hide();
-      $("#tenpins").hide();
-    } else {
-      $("#sixpins").show();
-      $("#sevenpins").show();
-      $("#eightpins").show();
-      $("#ninepins").show();
-      $("#tenpins").show();
-    }
+    hideOrShowButtons(5);
   });
 
   $("#sixpins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(6);
     updateScore();
-
-    if (midframe === true) {
-      $("#fivepins").hide();
-      $("#sixpins").hide();
-      $("#sevenpins").hide();
-      $("#eightpins").hide();
-      $("#ninepins").hide();
-      $("#tenpins").hide();
-    } else {
-      $("#fivepins").show();
-      $("#sixpins").show();
-      $("#sevenpins").show();
-      $("#eightpins").show();
-      $("#ninepins").show();
-      $("#tenpins").show();
-    }
+    hideOrShowButtons(6);
   });
 
   $("#sevenpins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(7);
     updateScore();
+    hideOrShowButtons(7);
   });
 
   $("#eightpins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(8);
     updateScore();
+    hideOrShowButtons(8);
   });
 
   $("#ninepins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(9);
     updateScore();
+    hideOrShowButtons(9);
   });
 
   $("#tenpins").on("click", function () {
