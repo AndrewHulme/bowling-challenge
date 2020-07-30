@@ -6,6 +6,18 @@ $(document).ready(function () {
   var frametenspare = false;
   var frametenstrike = false;
   var firstroll;
+  var numbersObject = {
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four",
+    "5": "five",
+    "6": "six",
+    "7": "seven",
+    "8": "eight",
+    "9": "nine",
+    "10": "ten",
+  };
 
   function updateScore() {
     $("#currenttotal").text(game.calculateCurrentScore());
@@ -78,18 +90,64 @@ $(document).ready(function () {
     findCurrentFrame();
     addScoreToTable(4);
     updateScore();
+
+    if (midframe === true) {
+      // $("#fivepins").hide();
+      // $("#sixpins").hide();
+      $("#sevenpins").hide();
+      $("#eightpins").hide();
+      $("#ninepins").hide();
+      $("#tenpins").hide();
+    } else {
+      $("#fivepins").show();
+      $("#sixpins").show();
+      $("#sevenpins").show();
+      $("#eightpins").show();
+      $("#ninepins").show();
+      $("#tenpins").show();
+    }
   });
 
   $("#fivepins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(5);
     updateScore();
+
+    if (midframe === true) {
+      $("#sixpins").hide();
+      $("#sevenpins").hide();
+      $("#eightpins").hide();
+      $("#ninepins").hide();
+      $("#tenpins").hide();
+    } else {
+      $("#sixpins").show();
+      $("#sevenpins").show();
+      $("#eightpins").show();
+      $("#ninepins").show();
+      $("#tenpins").show();
+    }
   });
 
   $("#sixpins").on("click", function () {
     findCurrentFrame();
     addScoreToTable(6);
     updateScore();
+
+    if (midframe === true) {
+      $("#fivepins").hide();
+      $("#sixpins").hide();
+      $("#sevenpins").hide();
+      $("#eightpins").hide();
+      $("#ninepins").hide();
+      $("#tenpins").hide();
+    } else {
+      $("#fivepins").show();
+      $("#sixpins").show();
+      $("#sevenpins").show();
+      $("#eightpins").show();
+      $("#ninepins").show();
+      $("#tenpins").show();
+    }
   });
 
   $("#sevenpins").on("click", function () {
