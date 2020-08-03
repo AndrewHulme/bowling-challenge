@@ -7,6 +7,8 @@ Bowling Challenge
 ## Approach
 
 ## Technology used
+- Languages/Technologies: JavaScript, jQuery, HTML/CSS, Bootstrap
+- Testing Framework: Jasmine
 
 ## How to run the project:
 
