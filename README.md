@@ -2,6 +2,8 @@
 Bowling Challenge
 =================
 
+Forked from [here](https://github.com/makersacademy/bowling-challenge).
+
 ## Description
 A dynamic bowling scorecard based on the classic coding kata.
 
