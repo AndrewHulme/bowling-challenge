@@ -34,14 +34,4 @@ An example of code running can be seen below:
 ## How to run tests:
 Clone this repository from Github then open SpecRunner.html in your browser.
 
-## Specification
 
-### Requirements
-
-## User stories
-
-## Acceptance criteria
-
-## Models
-
-## Input/Output Table
