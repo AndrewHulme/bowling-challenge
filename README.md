@@ -3,6 +3,7 @@ Bowling Challenge
 =================
 
 ## Description
+A dynamic bowling scorecard based on the classic coding kata.
 
 ## Approach
 
