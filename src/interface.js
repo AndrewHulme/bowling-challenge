@@ -85,6 +85,7 @@ $(document).ready(function () {
     findCurrentFrame();
     addScoreToTable(0);
     updateScore();
+    hideOrShowButtons(0);
   });
 
   $("#onepin").on("click", function () {
