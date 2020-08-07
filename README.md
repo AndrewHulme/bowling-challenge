@@ -2,7 +2,7 @@
 Bowling Challenge
 =================
 
-Forked from [here](https://github.com/makersacademy/bowling-challenge).
+Forked from [here](https://github.com/makersacademy/bowling-challenge).<br />
 Deployed [here](https://andrewhulme.github.io/bowling-challenge/).
 
 ## Description
