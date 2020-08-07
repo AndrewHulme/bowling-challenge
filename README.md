@@ -21,6 +21,15 @@ There is also a jQuery interface file which is responsible for all interactivity
 - Testing Framework: Jasmine
 
 ## How to run the project:
+- Clone this repository from Github then open the index.html file in your browser.
+- Click on the buttons to input your score.
+- See your current/final score!
+
+An example of code running can be seen below:
+
+![BowlingExample](images/bowlingscorecardexample.png)
+
+
 
 ## How to run tests:
 
