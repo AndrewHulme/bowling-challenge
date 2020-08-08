@@ -11,7 +11,7 @@ A dynamic bowling scorecard based on the classic coding kata.
 ## Approach
 I have split the logic into two classes: Game and Frame. 
 
-- The Game class is responsible for storing the frame scores, adding frames and calculating the scores. 
+- The Game class is responsible for storing the frame scores, adding frame scores and calculating the total/current score. 
 - The Frame class is responsible for calculating if a frame is a strike or a spare. 
 
 There is also a jQuery interface file which is responsible for all interactivity.
