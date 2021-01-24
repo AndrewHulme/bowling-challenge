@@ -12,12 +12,11 @@ th {
 }
 
 body {
-  background-color: #b8b8b8
+  background-color: #b8b8b8;
 }
 
 button {
   color: black;
-
 }
 
 table {
@@ -25,3 +24,6 @@ table {
   border: thick solid black;
 }
 
+#rollinput {
+  text-align: center;
+}
